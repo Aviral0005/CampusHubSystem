@@ -1,0 +1,141 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI', sans-serif;
+}
+
+.login-container{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+}
+
+/* GLASS CARD */
+.login-card{
+width:350px;
+padding:40px;
+border-radius:20px;
+background: rgba(255,255,255,0.1);
+backdrop-filter: blur(15px);
+box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+text-align:center;
+color:#fff;
+
+/* ANIMATION */
+animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform: translateY(30px);
+}
+to{
+opacity:1;
+transform: translateY(0);
+}
+}
+
+.logo{
+width:80px;
+margin-bottom:10px;
+animation: float 3s ease-in-out infinite;
+}
+
+/* FLOATING LOGO */
+@keyframes float{
+0%{transform: translateY(0);}
+50%{transform: translateY(-10px);}
+100%{transform: translateY(0);}
+}
+
+.subtitle{
+font-size:14px;
+margin-bottom:20px;
+opacity:0.8;
+}
+
+/* INPUT STYLE */
+.login-card input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+outline:none;
+background: rgba(255,255,255,0.2);
+color:white;
+}
+
+.login-card input::placeholder{
+color:#ddd;
+}
+
+/* BUTTON */
+.login-card button{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:none;
+border-radius:8px;
+background: linear-gradient(45deg,#00c6ff,#0072ff);
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.login-card button:hover{
+transform: scale(1.05);
+box-shadow: 0 0 15px rgba(0,114,255,0.7);
+}
+
+/* FORGOT */
+.forgot{
+margin-top:15px;
+font-size:13px;
+opacity:0.7;
+cursor:pointer;
+}
+
+.forgot:hover{
+text-decoration:underline;
+}
+.login-container::after{
+content:"Aviral Verma";
+position:absolute;
+bottom:20px;
+right:30px;
+font-size:14px;
+color:rgba(255,255,255,0.2);
+letter-spacing:2px;
+}
+
+/* TEACHER COLOR THEME */
+.login-card.teacher{
+border: 1px solid rgba(255,255,255,0.2);
+}
+
+.login-card.teacher button{
+background: linear-gradient(45deg,#ff7e5f,#feb47b);
+}
+
+.login-card.teacher button:hover{
+box-shadow: 0 0 15px rgba(255,126,95,0.7);
+}
+
+/* ADMIN THEME */
+.login-card.admin{
+border: 1px solid rgba(255,255,255,0.2);
+}
+
+.login-card.admin button{
+background: linear-gradient(45deg,#8e2de2,#4a00e0);
+}
+
+.login-card.admin button:hover{
+box-shadow: 0 0 15px rgba(142,45,226,0.7);
+}
