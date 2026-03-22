@@ -1,25 +1,36 @@
+require("dotenv").config();
+
 const express = require("express");
 const router = express.Router();
 const axios = require("axios");
 
 router.post("/", async (req, res) => {
-
   const { message } = req.body;
 
   try {
-
     const response = await axios.post(
       "https://openrouter.ai/api/v1/chat/completions",
       {
-        model: "openrouter/auto",
+        model: "meta-llama/llama-3-8b-instruct",
         messages: [
           {
             role: "system",
-        content: `
-You are CampusHub AI. Answer in simple Hinglish for students.
+            content: `
+You are CampusHub AI, a helpful assistant for students.
 
-If user asks who made you, say:
-"Mujhe Aviral ne banaya hai using APIs aur modern technologies 😎"
+STRICT RULES:
+- Always reply in simple Hinglish (mix of Hindi + English)
+- Keep answers short, clear, and helpful
+- Do NOT act funny or use jokes
+- Do NOT use movie, series, or random references
+- Do NOT say things like "I am AI" unless asked
+- Always behave like a professional student helper
+
+SPECIAL RULE:
+- ONLY IF user asks "who made you" or "kisne banaya"
+  → Reply: "Mujhe Aviral ne banaya hai using APIs aur modern technologies 😎"
+
+- For all other questions → answer normally
 `
           },
           {
@@ -30,7 +41,7 @@ If user asks who made you, say:
       },
       {
         headers: {
-          "Authorization": "Bearer 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",
+          Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
           "Content-Type": "application/json"
         }
       }
@@ -41,8 +52,11 @@ If user asks who made you, say:
     res.json({ reply });
 
   } catch (error) {
-    console.log(error.message);
-    res.json({ reply: "AI not responding 😢" });
+    console.log("ERROR:", error.response?.data || error.message);
+
+    res.json({
+      reply: "AI not responding 😢 (call Aviral)"
+    });
   }
 });
 
