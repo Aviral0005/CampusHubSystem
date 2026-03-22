@@ -1,8 +1,8 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const multer = require("multer");
-require("dotenv").config();
 
 const Notice = require("./models/Notice");
 const Result = require("./models/Result");
@@ -344,12 +344,15 @@ app.get("/materials", async (req, res) => {
 
 /* ================= MONGODB ================= */
 
+console.log("MONGO URI:", process.env.MONGO_URI);
+
 mongoose.connect(process.env.MONGO_URI)
-.then(() => console.log("MongoDB Connected"))
-.catch(err => console.log(err));
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.log("Mongo Error:", err));
 
 /* ================= SERVER ================= */
 
 app.listen(5000, () => {
   console.log("Server running on port 5000");
 });
+
