@@ -14,14 +14,14 @@ fetchFees();
 
 const fetchFees = async () => {
 
-const res = await axios.get("http://localhost:5000/api/fees");
+const res = await axios.get("https://campushub-backend-6r2u.onrender.com/api/fees");
 setFees(res.data);
 
 };
 
 const addFee = async () => {
 
-await axios.post("http://localhost:5000/api/fees/add",{
+await axios.post("https://campushub-backend-6r2u.onrender.com/api/fees/add",{
 studentName,
 amount,
 status
@@ -36,7 +36,7 @@ fetchFees();
 
 const deleteFee = async(id)=>{
 
-await axios.delete(`http://localhost:5000/api/fees/${id}`);
+await axios.delete(`https://campushub-backend-6r2u.onrender.com/api/fees/${id}`);
 
 fetchFees();
 

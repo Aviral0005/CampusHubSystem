@@ -22,7 +22,7 @@ const [results,setResults] = useState([]);
 
 useEffect(()=>{
 
-fetch("http://localhost:5000/students")
+fetch("https://campushub-backend-6r2u.onrender.com/students")
 .then(res=>res.json())
 .then(data=>{
 
@@ -31,7 +31,7 @@ setStudent(s);
 
 });
 
-fetch("http://localhost:5000/attendance")
+fetch("https://campushub-backend-6r2u.onrender.com/attendance")
 .then(res=>res.json())
 .then(data=>{
 
@@ -40,7 +40,7 @@ setAttendance(filtered);
 
 });
 
-fetch("http://localhost:5000/results")
+fetch("https://campushub-backend-6r2u.onrender.com/results")
 .then(res=>res.json())
 .then(data=>{
 

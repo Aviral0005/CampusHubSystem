@@ -39,7 +39,7 @@ navigate("/");
 
 useEffect(()=>{
 
-fetch("http://localhost:5000/dashboard")
+fetch("https://campushub-backend-6r2u.onrender.com/dashboard")
 .then(res=>res.json())
 .then(data=>setStats(data));
 

@@ -24,7 +24,7 @@ const [dateFilter,setDateFilter] = useState("");
 
 useEffect(()=>{
 
-fetch("http://localhost:5000/attendance/2025")
+fetch("https://campushub-backend-6r2u.onrender.com/attendance/2025")
 .then(res=>res.json())
 .then(data=>setRecords(data))
 .catch(err=>console.log(err));
@@ -35,7 +35,7 @@ fetch("http://localhost:5000/attendance/2025")
 
 const deleteRecord = async(id)=>{
 
-await fetch(`http://localhost:5000/delete-attendance/${id}`,{
+await fetch(`https://campushub-backend-6r2u.onrender.com/delete-attendance/${id}`,{
 method:"DELETE"
 });
 

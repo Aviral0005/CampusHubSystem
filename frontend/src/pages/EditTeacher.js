@@ -14,7 +14,7 @@ const [phone,setPhone] = useState("");
 
 useEffect(()=>{
 
-fetch("http://localhost:5000/teachers")
+fetch("https://campushub-backend-6r2u.onrender.com/teachers")
 .then(res=>res.json())
 .then(data=>{
 
@@ -33,7 +33,7 @@ setPhone(teacher.phone);
 
 const updateTeacher = async()=>{
 
-await fetch(`http://localhost:5000/update-teacher/${id}`,{
+await fetch(`https://campushub-backend-6r2u.onrender.com/update-teacher/${id}`,{
 method:"PUT",
 headers:{
 "Content-Type":"application/json"

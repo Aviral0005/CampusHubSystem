@@ -48,7 +48,7 @@ navigate("/");
 
 useEffect(()=>{
 
-fetch(`http://localhost:5000/api/students/${studentId}`)
+fetch(`https://campushub-backend-6r2u.onrender.com/api/students/${studentId}`)
 .then(res=>res.json())
 .then(data=>{
 if(data){
@@ -59,7 +59,7 @@ setPhotoUrl(data.photo);
 
 /* ATTENDANCE */
 
-fetch(`http://localhost:5000/attendance/${studentId}`)
+fetch(`https://campushub-backend-6r2u.onrender.com/attendance/${studentId}`)
 .then(res=>res.json())
 .then(data=>{
 
@@ -76,7 +76,7 @@ setAttendance(percentage);
 
 /* NOTICES */
 
-fetch("http://localhost:5000/notices")
+fetch("https://campushub-backend-6r2u.onrender.com")
 .then(res=>res.json())
 .then(data=>{
 setNotices(data);
@@ -109,7 +109,7 @@ return;
 const formData = new FormData();
 formData.append("photo",file);
 
-await fetch(`http://localhost:5000/upload-student-photo/${studentId}`,{
+await fetch(`https://campushub-backend-6r2u.onrender.com/upload-student-photo/${studentId}`,{
 method:"POST",
 body:formData
 });
@@ -180,7 +180,7 @@ return(
 {photoUrl ?
 
 <img
-src={`http://localhost:5000/uploads/${photoUrl}`}
+src={`https://campushub-backend-6r2u.onrender.com/uploads/${photoUrl}`}
 alt="profile"
 style={avatarImg}
 />

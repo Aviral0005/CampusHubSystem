@@ -8,7 +8,7 @@ const [file,setFile] = useState(null);
 const [materials,setMaterials] = useState([]);
 
 useEffect(()=>{
-fetch("http://localhost:5000/materials")
+fetch("https://campushub-backend-6r2u.onrender.com/materials")
 .then(res=>res.json())
 .then(data=>setMaterials(data))
 },[])
@@ -23,7 +23,7 @@ formData.append("title",title);
 formData.append("subject",subject);
 formData.append("file",file);
 
-await fetch("http://localhost:5000/upload-material",{
+await fetch("https://campushub-backend-6r2u.onrender.com/upload-material",{
 method:"POST",
 body:formData
 })
@@ -37,7 +37,7 @@ window.location.reload();
 
 const deleteMaterial = async(id)=>{
 
-await fetch(`http://localhost:5000/delete-material/${id}`,{
+await fetch(`https://campushub-backend-6r2u.onrender.com/delete-material/${id}`,{
 method:"DELETE"
 });
 
@@ -94,7 +94,7 @@ style={input}
 <div style={{display:"flex",gap:"10px"}}>
 
 <a
-href={`http://localhost:5000/uploads/${m.file}`}
+href={`https://campushub-backend-6r2u.onrender.com/uploads/${m.file}`}
 target="_blank"
 rel="noreferrer"
 style={viewBtn}

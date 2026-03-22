@@ -18,7 +18,7 @@ e.preventDefault();
 try{
 
 await axios.post(
-"http://localhost:5000/add-teacher",
+"https://campushub-backend-6r2u.onrender.com/add-teacher",
 {
 name,
 teacherId,

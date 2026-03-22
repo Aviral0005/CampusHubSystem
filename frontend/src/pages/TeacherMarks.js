@@ -13,7 +13,7 @@ const uploadMarks = async ()=>{
 
 try{
 
-await axios.post("http://localhost:5000/api/results/add",{
+await axios.post("https://campushub-backend-6r2u.onrender.com/api/results/add",{
 
 studentName,
 rollNumber,

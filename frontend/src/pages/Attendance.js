@@ -10,7 +10,7 @@ const [date,setDate] = useState(new Date().toISOString().split("T")[0]);
 
 useEffect(()=>{
 
-fetch("http://localhost:5000/students")
+fetch("https://campushub-backend-6r2u.onrender.com/students")
 .then(res=>res.json())
 .then(data=>setStudents(data));
 
@@ -20,7 +20,7 @@ fetch("http://localhost:5000/students")
 
 const saveAttendance = async()=>{
 
-await fetch("http://localhost:5000/mark-attendance",{
+await fetch("https://campushub-backend-6r2u.onrender.com/mark-attendance",{
 method:"POST",
 headers:{
 "Content-Type":"application/json"

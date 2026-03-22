@@ -7,7 +7,7 @@ const [materials,setMaterials] = useState([]);
 const [preview,setPreview] = useState(null);
 
 useEffect(()=>{
-fetch("http://localhost:5000/materials")
+fetch("https://campushub-backend-6r2u.onrender.com/materials")
 .then(res=>res.json())
 .then(data=>setMaterials(data))
 },[])
@@ -38,14 +38,14 @@ return(
 
 <button
 style={previewBtn}
-onClick={()=>setPreview(`http://localhost:5000/uploads/${m.file}`)}
+onClick={()=>setPreview(`https://campushub-backend-6r2u.onrender.com/uploads/${m.file}`)}
 
 >
 
 👁 Preview </button>
 
 <a
-href={`http://localhost:5000/uploads/${m.file}`}
+href={`https://campushub-backend-6r2u.onrender.com/uploads/${m.file}`}
 target="_blank"
 rel="noreferrer"
 style={downloadBtn}

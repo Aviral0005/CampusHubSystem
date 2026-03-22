@@ -15,7 +15,7 @@ e.preventDefault();
 
 try {
 const res = await axios.post(
-"http://localhost:5000/api/auth/login",
+"https://campushub-backend-6r2u.onrender.com/api/auth/login",
 {
 id,
 password,

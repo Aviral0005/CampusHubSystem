@@ -13,7 +13,7 @@ fetchSubjects();
 }, []);
 
 const fetchSubjects = async () => {
-const res = await axios.get("http://localhost:5000/api/subjects");
+const res = await axios.get("https://campushub-backend-6r2u.onrender.com/api/subjects");
 setSubjects(res.data);
 };
 
@@ -24,7 +24,7 @@ alert("Fill all fields");
 return;
 }
 
-await axios.post("http://localhost:5000/api/subjects/add",{name,teacher});
+await axios.post("https://campushub-backend-6r2u.onrender.com/api/subjects/add",{name,teacher});
 
 setName("");
 setTeacher("");
@@ -35,7 +35,7 @@ fetchSubjects();
 
 const deleteSubject = async (id) => {
 
-await axios.delete(`http://localhost:5000/api/subjects/${id}`);
+await axios.delete(`https://campushub-backend-6r2u.onrender.com/api/subjects/${id}`);
 fetchSubjects();
 
 };

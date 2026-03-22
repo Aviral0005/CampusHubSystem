@@ -25,7 +25,7 @@ fetchStudents();
 
 const fetchResults = async ()=>{
 try{
-const res = await axios.get("http://localhost:5000/api/results");
+const res = await axios.get("https://campushub-backend-6r2u.onrender.com/api/results");
 setResults(res.data);
 }catch(err){
 console.log(err);
@@ -36,7 +36,7 @@ console.log(err);
 
 const fetchStudents = async ()=>{
 try{
-const res = await axios.get("http://localhost:5000/api/students");
+const res = await axios.get("https://campushub-backend-6r2u.onrender.com/api/students");
 setStudents(res.data);
 }catch(err){
 console.log(err);
@@ -59,7 +59,7 @@ setCourse(student.course);
 const searchResult = async ()=>{
 try{
 const res = await axios.get(
-`http://localhost:5000/api/results/roll/${searchRoll}`
+`https://campushub-backend-6r2u.onrender.com/api/results/roll/${searchRoll}`
 );
 setResults(res.data);
 }catch(err){
@@ -85,7 +85,7 @@ setSubjects(updated);
 
 const addResult = async ()=>{
 
-await axios.post("http://localhost:5000/api/results/add",{
+await axios.post("https://campushub-backend-6r2u.onrender.com/api/results/add",{
 studentName,
 rollNumber,
 course,
@@ -103,7 +103,7 @@ fetchResults();
 /* DELETE RESULT */
 
 const deleteResult = async(id)=>{
-await axios.delete(`http://localhost:5000/api/results/${id}`);
+await axios.delete(`https://campushub-backend-6r2u.onrender.com/api/results/${id}`);
 fetchResults();
 };
 

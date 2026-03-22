@@ -16,7 +16,7 @@ return;
 
 try{
 
-const res = await fetch("http://localhost:5000/add-student",{
+const res = await fetch("https://campushub-backend-6r2u.onrender.com/add-student",{
 method:"POST",
 headers:{
 "Content-Type":"application/json"

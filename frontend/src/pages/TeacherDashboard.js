@@ -26,7 +26,7 @@ navigate("/");
 };
 
 useEffect(()=>{
-axios.get("http://localhost:5000/students")
+axios.get("https://campushub-backend-6r2u.onrender.com/students")
 .then(res=>setStudents(res.data))
 .catch(err=>console.log(err));
 },[]);

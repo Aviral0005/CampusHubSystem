@@ -16,7 +16,7 @@ try{
 const rollNumber = localStorage.getItem("studentId");
 
 const res = await axios.get(
-`http://localhost:5000/api/results/roll/${rollNumber}`
+`https://campushub-backend-6r2u.onrender.com/api/results/roll/${rollNumber}`
 );
 
 setResults(res.data);

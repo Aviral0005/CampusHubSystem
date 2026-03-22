@@ -15,7 +15,7 @@ year:""
 
 const [editId,setEditId] = useState(null);
 
-const API = "http://localhost:5000/api/students";
+const API = "https://campushub-backend-6r2u.onrender.com/api/students";
 
 
 /* LOAD STUDENTS FROM DATABASE */

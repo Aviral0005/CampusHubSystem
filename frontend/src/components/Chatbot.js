@@ -16,7 +16,7 @@ useEffect(() => {
 
 // 🔥 Load chat history
 useEffect(() => {
-  fetch("http://localhost:5000/api/ai/history")
+  fetch("https://campushub-backend-6r2u.onrender.com/api/ai/history")
     .then(res => res.json())
     .then(data => setMessages(data));
 }, []);
@@ -30,7 +30,7 @@ const sendMessage = async () => {
   setLoading(true);
 
   try {
-    const res = await fetch("http://localhost:5000/api/ai", {
+    const res = await fetch("https://campushub-backend-6r2u.onrender.com/api/ai", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

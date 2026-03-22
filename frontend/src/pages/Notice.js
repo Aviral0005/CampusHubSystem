@@ -10,7 +10,7 @@ const [image,setImage]=useState(null);
 
 useEffect(()=>{
 
-fetch("http://localhost:5000/notices")
+fetch("https://campushub-backend-6r2u.onrender.com/notices")
 .then(res=>res.json())
 .then(data=>setNotices(data));
 
@@ -24,7 +24,7 @@ formData.append("title",title);
 formData.append("description",description);
 formData.append("image",image);
 
-await fetch("http://localhost:5000/add-notice",{
+await fetch("https://campushub-backend-6r2u.onrender.com/add-notice",{
 method:"POST",
 body:formData
 });
@@ -35,7 +35,7 @@ window.location.reload();
 
 const deleteNotice = async(id)=>{
 
-await fetch(`http://localhost:5000/delete-notice/${id}`,{
+await fetch(`https://campushub-backend-6r2u.onrender.com/delete-notice/${id}`,{
 method:"DELETE"
 });
 
@@ -108,7 +108,7 @@ gap:"20px"
 {n.image && (
 
 <img
-src={`http://localhost:5000/uploads/${n.image}`}
+src={`https://campushub-backend-6r2u.onrender.com/uploads/${n.image}`}
 style={{
 width:"100%",
 height:"150px",

@@ -11,7 +11,7 @@ const rollNumber = localStorage.getItem("studentId");
 
 useEffect(()=>{
 
-fetch(`http://localhost:5000/attendance/${rollNumber}`)
+fetch(`https://campushub-backend-6r2u.onrender.com/attendance/${rollNumber}`)
 .then(res=>res.json())
 .then(data=>setAttendance(data));
 

@@ -6,7 +6,7 @@ const [notices,setNotices] = useState([]);
 
 useEffect(()=>{
 
-fetch("http://localhost:5000/notices")
+fetch("https://campushub-backend-6r2u.onrender.com/notices")
 .then(res=>res.json())
 .then(data=>{
 setNotices(data);
@@ -37,7 +37,7 @@ return(
 {n.image && (
 
 <img
-src={`http://localhost:5000/uploads/${n.image}`}
+src={`https://campushub-backend-6r2u.onrender.com/uploads/${n.image}`}
 style={image}
 />
 

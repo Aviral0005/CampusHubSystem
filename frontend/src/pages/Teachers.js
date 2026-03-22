@@ -9,7 +9,7 @@ const [teachers,setTeachers] = useState([]);
 
 useEffect(()=>{
 
-axios.get("http://localhost:5000/teachers") // ✅ FIXED URL
+axios.get("https://campushub-backend-6r2u.onrender.com/teachers") // ✅ FIXED URL
 .then(res=>{
 console.log("API DATA:", res.data); // ✅ DEBUG
 setTeachers(res.data);
