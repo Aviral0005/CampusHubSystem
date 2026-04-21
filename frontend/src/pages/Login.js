@@ -66,8 +66,6 @@ onChange={(e) => setPassword(e.target.value)}
 </form>
 
 <p className="forgot">Forgot Password?</p>
-<p className="credit">Designed by Aviral Verma</p>
-
 </div>
 
 </div>

@@ -70,7 +70,7 @@ onChange={(e) => setPassword(e.target.value)}
 
 <p className="forgot">Forgot Password?</p>
 
-<p className="credit">Designed by Aviral Verma</p>
+
 
 </div>
 

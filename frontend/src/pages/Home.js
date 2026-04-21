@@ -137,7 +137,7 @@ and experienced faculty.
 
 {/* Footer */}
 <div style={footer}>
-<p>© 2026 CampusHub System | Made by Aviral 💙</p>
+<p>© 2026| CampusHub System | 💙</p>
 </div>
 
 <Chatbot />
